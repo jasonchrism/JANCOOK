@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="16dp"
+    android:padding="2dp">
+    
+    <RelativeLayout
+        android:layout_width="180dp"
+        android:layout_height="150dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="8dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Name"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@id/imageView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/text_gray"
+            android:textSize="8sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@id/tvPrice"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calories Info"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/primary"
+            android:textSize="8sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@id/tvCategory"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
