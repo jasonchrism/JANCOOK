@@ -1,17 +1,17 @@
 package com.example.jancook;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-public class ingredient_detailActivity extends AppCompatActivity {
+public class DictionaryFragment extends Fragment {
 
     GridView gridView;
 
@@ -33,55 +33,18 @@ public class ingredient_detailActivity extends AppCompatActivity {
     };
     int[] images = {R.drawable.garlic, R.drawable.shallot, R.drawable.broccoli, R.drawable.tomato, R.drawable.cucumber, R.drawable.carrot, R.drawable.pumpkin, R.drawable.spinach, R.drawable.eggplant, R.drawable.jackfruit};
 
-    ImageView imageView;
-    TextView textView;
-    TextView textViewPrice;
-    TextView textViewCategory;
-    TextView textViewInformation;
-    TextView textViewExplanation;
-    ImageView backBtn;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ingredient_detail);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_dictionary, container, false);
 
-        gridView = findViewById(R.id.gridView);
-        GridViewDictionaryUtils.setupGridView(gridView, this, names, images, prices, categories, informations, explanations);
-
-        imageView = findViewById(R.id.imageView);
-        textView = findViewById(R.id.tvName);
-        textViewPrice = findViewById(R.id.tvPrice);
-        textViewCategory = findViewById(R.id.tvCategory);
-        textViewInformation = findViewById(R.id.tvInformation);
-        textViewExplanation = findViewById(R.id.tvExplanation);
-
-        backBtn = findViewById(R.id.backBtn);
-
-        Intent intent = getIntent();
-
-        if (intent.getExtras() != null) {
-            String selectedName = intent.getStringExtra("name");
-            int selectedImage = intent.getIntExtra("image", 0);
-            String selectedPrice = intent.getStringExtra("price");
-            String selectedCategory = intent.getStringExtra("category");
-            String selectedInformation = intent.getStringExtra("information");
-            String selectedExplanation = intent.getStringExtra("explanation");
-
-            textView.setText(selectedName);
-            imageView.setImageResource(selectedImage);
-            textViewPrice.setText(selectedPrice);
-            textViewCategory.setText(selectedCategory);
-            textViewInformation.setText(selectedInformation);
-            textViewExplanation.setText(selectedExplanation);
-        }
-
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        // Find the GridView by its ID
+        gridView = view.findViewById(R.id.gridView);
+        System.out.println("hello");
+        System.out.println(gridView);
+        GridViewDictionaryUtils.setupGridView(gridView, getContext(), names, images, prices, categories, informations, explanations);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -93,7 +56,7 @@ public class ingredient_detailActivity extends AppCompatActivity {
                 String selectedInformation = informations[position];
                 String selectedExplanation = explanations[position];
 
-                startActivity(new Intent(ingredient_detailActivity.this, ingredient_detailActivity.class)
+                startActivity(new Intent(getContext(), ingredient_detailActivity.class)
                         .putExtra("name", selectedName)
                         .putExtra("image", selectedImage)
                         .putExtra("price", selectedPrice)
@@ -102,5 +65,6 @@ public class ingredient_detailActivity extends AppCompatActivity {
                         .putExtra("explanation", selectedExplanation));
             }
         });
+        return view;
     }
 }
