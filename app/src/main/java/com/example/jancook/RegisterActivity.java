@@ -3,7 +3,16 @@ package com.example.jancook;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
+import android.text.style.UnderlineSpan;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.passwordEditText);
         confirmPasswordEditText = findViewById(R.id.confirmPasswordEditText);
         signUpButton = findViewById(R.id.signUpButton);
+        TextView loginTextView = findViewById(R.id.loginTextView);
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +55,32 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //        ini untuk sign in words aja
+        String loginText = "Already have an account? Sign In";
+        SpannableString spannableString = new SpannableString(loginText);
+
+//        ini untuk bikin cuman text sign up yang bisa di click
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        };
+
+        int startIndex = loginText.indexOf("Sign In");
+        int endIndex = startIndex + "Sign In".length();
+
+//        ini untuk edit text sign up aja, bikin style jadi bold, white, dan underlined
+        spannableString.setSpan(clickableSpan, startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD), startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(new UnderlineSpan(), startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(new ForegroundColorSpan(Color.WHITE), startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+//        ini untuk applied apa yang udah dikasih dari bagian di atas ini
+        loginTextView.setText(spannableString);
+        loginTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     private boolean validateInput()
