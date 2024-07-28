@@ -42,8 +42,6 @@ public class DictionaryFragment extends Fragment {
 
         // Find the GridView by its ID
         gridView = view.findViewById(R.id.gridView);
-        System.out.println("hello");
-        System.out.println(gridView);
         GridViewDictionaryUtils.setupGridView(gridView, getContext(), names, images, prices, categories, informations, explanations);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
