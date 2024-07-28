@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_red_lighter"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="410dp"
+        android:layout_height="210dp"
+        android:background="@drawable/jancookflag"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/SignInTV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/SignInParagraph"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Sign in now to access thousands of easy recipes, complete with step-by-step instructions and ingredient-based search features, and join a community of food enthusiasts sharing tips and culinary inspiration!"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"/>
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:hint="Username"
+        android:inputType="text"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/edittext_rounded"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/text_gray"
+        />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="16px"
+        android:background="@drawable/edittext_rounded"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/text_gray"
+        />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Sign In"
+        android:textSize="20dp"
+        android:layout_marginTop="42px" />
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Don't have an account? Sign Up"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        />
+
+</LinearLayout>

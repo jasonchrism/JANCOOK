@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_red_lighter"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="410dp"
+        android:layout_height="210dp"
+        android:background="@drawable/jancookflag"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/SignUpTV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/SignInParagraph"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Sign up now to unlock thousands of easy recipes, personalized recommendations, and a vibrant community of food lovers!"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"/>
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:hint="Username"
+        android:inputType="text"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/edittext_rounded"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/text_gray"
+        />
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_rounded"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/text_gray"
+        />
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_rounded"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/text_gray"
+        />
+    <EditText
+        android:id="@+id/confirmPasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:hint="Confirm password"
+        android:inputType="textPassword"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_rounded"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/text_gray"
+        />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Sign Up"
+        android:textSize="20dp"
+        android:layout_marginTop="42px" />
+
+
+</LinearLayout>
