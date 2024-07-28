@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class HomeActivity extends AppCompatActivity {
 
     ActivityHomeBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,17 +24,17 @@ public class HomeActivity extends AppCompatActivity {
 
         // Initial fragment
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frame_layout, new HomeFragment())
-                    .commit();
+            replaceFragment(new HomeFragment());
         }
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.setOnItemSelectedListener(item -> {
             Fragment selectedFragment = null;
+            boolean addToBackStack = true;
             switch (item.getItemId()) {
                 case R.id.home:
                     selectedFragment = new HomeFragment();
+//                    addToBackStack = false;
                     break;
                 case R.id.dictionary:
                     selectedFragment = new DictionaryFragment();
@@ -49,13 +50,11 @@ public class HomeActivity extends AppCompatActivity {
                     break;
             }
             if (selectedFragment != null) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_layout, selectedFragment)
-                        .addToBackStack(null) // Add to back stack
-                        .commit();
+                replaceFragment(selectedFragment);
             }
             return true;
         });
+
         binding.post.setOnClickListener(v -> {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -63,5 +62,13 @@ public class HomeActivity extends AppCompatActivity {
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.frame_layout, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }
