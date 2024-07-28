@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@id/backBtn"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Search"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:id="@+id/search"
+            app:iconifiedByDefault="false"
+            android:focusable="false"
+            app:queryHint="Search recipe in JanCook!"
+            app:searchIcon="@drawable/baseline_search_24"
+            android:background="@drawable/search_bg"
+            style="@style/CustomSearchView"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/poppins_bolditalic"
+            android:text="Trends For You"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_below="@id/search"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView"
+            android:layout_marginTop="8dp"
+            android:scrollbars="vertical"
+            android:layout_below="@id/trends"/>
+
+    </RelativeLayout>
+</LinearLayout>
