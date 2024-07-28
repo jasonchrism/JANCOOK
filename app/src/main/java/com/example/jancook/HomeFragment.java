@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment {
 
         tabLayout.setupWithViewPager(viewPager);
 
-        VPAdapter vpAdapter = new VPAdapter(requireActivity().getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        VPAdapter vpAdapter = new VPAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpAdapter.addFragment(new ForYouFragment(), "For You");
         vpAdapter.addFragment(new FollowingFragment(), "Following");
         viewPager.setAdapter(vpAdapter);
