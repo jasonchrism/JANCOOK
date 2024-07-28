@@ -1,6 +1,10 @@
 package com.example.jancook;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -21,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.bottomNavigation.setBackground(null);
+
 
         // Initial fragment
         if (savedInstanceState == null) {

@@ -53,6 +53,7 @@
                         app:layout_constraintEnd_toStartOf="@+id/frameLayout">
 
                         <ImageView
+                            android:id="@+id/btn_search"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="16dp"
