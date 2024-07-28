@@ -24,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
 
         // Initial fragment
         if (savedInstanceState == null) {
-            replaceFragment(new HomeFragment(), false);
+            replaceFragment(new HomeFragment());
         }
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
@@ -34,7 +34,7 @@ public class HomeActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.home:
                     selectedFragment = new HomeFragment();
-                    addToBackStack = false;
+//                    addToBackStack = false;
                     break;
                 case R.id.dictionary:
                     selectedFragment = new DictionaryFragment();
@@ -50,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
                     break;
             }
             if (selectedFragment != null) {
-                replaceFragment(selectedFragment, addToBackStack);
+                replaceFragment(selectedFragment);
             }
             return true;
         });
@@ -64,15 +64,11 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    private void replaceFragment(Fragment fragment, boolean addToBackStack) {
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frame_layout, fragment);
-        if (addToBackStack) {
-            transaction.addToBackStack(null);
-        } else {
-            fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        }
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 }
