@@ -38,6 +38,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation "androidx.activity:activity:1.6.0-alpha05"
     implementation 'de.hdodenhof:circleimageview:3.1.0'
