@@ -5,151 +5,151 @@
     android:layout_height="match_parent"
     android:fillViewport="true" >
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/bg_color"
-    tools:context=".ingredient_detailActivity">
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="25dp"
-            android:src="@drawable/baseline_arrow_back_24" />
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_toRightOf="@id/backBtn"
-            android:textAlignment="center"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="50dp"
-            android:gravity="center"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Ingredients Details"
-            android:textColor="@color/black"
-            android:textSize="21sp" />
-
-    </RelativeLayout>
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginHorizontal="20dp"
-        android:src="@mipmap/ic_launcher"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
-        android:scaleType="fitXY"/>
-
-    <RelativeLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp">
+        android:orientation="vertical"
+        android:background="@color/bg_color"
+        tools:context=".ingredient_detailActivity">
 
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:textSize="26sp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="24dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/poppins_semibold"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:id="@+id/tvPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price"
-            android:textColor="@color/black"
-            android:fontFamily="@font/poppins_semibold"
-            android:layout_toRightOf="@id/tvName"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:textAlignment="textEnd"
-            android:layout_marginTop="6dp"
-            android:layout_marginRight="24dp"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:id="@+id/tvCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Category"
-            android:textColor="@color/text_gray"
-            android:fontFamily="@font/poppins_semibold"
-            android:layout_below="@id/tvName"
-            android:layout_marginLeft="24dp"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:id="@+id/tvInformation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvPrice"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginRight="26dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="140 cal/100gr"
-            android:textAlignment="textEnd"
-            android:textColor="@color/primary"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tvExplanation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvCategory"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="6dp"
-            android:text="Explanation"
-            android:textColor="@color/black"
-            android:fontFamily="@font/poppins"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tvMoreIngredients"
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvExplanation"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="6dp"
-            android:text="More Ingredients"
-            android:textColor="@color/text_gray"
-            android:fontFamily="@font/poppins"
-            android:textAlignment="center"
-            android:textSize="14sp" />
+            android:layout_height="wrap_content">
 
-        <GridView
-            android:id="@+id/gridView"
-            android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/backBtn"
+                android:textAlignment="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Ingredients Details"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/tvMoreIngredients"
-            android:layout_marginTop="25dp"
-            android:gravity="center"
-            android:numColumns="2"
-            android:verticalSpacing="16dp" />
-    </RelativeLayout>
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="26sp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="24dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_toRightOf="@id/tvName"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textEnd"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="24dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="@color/text_gray"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_below="@id/tvName"
+                android:layout_marginLeft="24dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPrice"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginRight="26dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="140 cal/100gr"
+                android:textAlignment="textEnd"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvExplanation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCategory"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="6dp"
+                android:text="Explanation"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMoreIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvExplanation"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="6dp"
+                android:text="More Ingredients"
+                android:textColor="@color/text_gray"
+                android:fontFamily="@font/poppins"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tvMoreIngredients"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:numColumns="2"
+                android:verticalSpacing="16dp" />
+        </RelativeLayout>
 
     </LinearLayout>
 </ScrollView>

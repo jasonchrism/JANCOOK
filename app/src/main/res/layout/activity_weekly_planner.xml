@@ -25,7 +25,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
         android:background="@drawable/weekly_planner_date_container">
-
+        
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,7 +48,6 @@
             app:tabMode="scrollable" />
 
     </LinearLayout>
-
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"

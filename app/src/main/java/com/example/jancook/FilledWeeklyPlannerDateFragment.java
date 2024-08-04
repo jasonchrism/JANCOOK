@@ -14,7 +14,7 @@ import com.example.jancook.Adapter.FilledWeeklyPlannerPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class WeekPlannerFragment extends Fragment {
+public class FilledWeeklyPlannerDateFragment extends Fragment {
 
     TabLayout tlWeeklyPlanner;
     private ViewPager2 viewPager;
@@ -24,9 +24,8 @@ public class WeekPlannerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_week_planner, container, false);
 
+        View view = inflater.inflate(R.layout.fragment_filled_weekly_planner_date, container, false);
         tlWeeklyPlanner = view.findViewById(R.id.tlWeeklyPlanner);
         viewPager = view.findViewById(R.id.viewPager);
 
@@ -42,9 +41,9 @@ public class WeekPlannerFragment extends Fragment {
                 view1.setSelected(true);
             }
         }
+
         return view;
     }
-
     private View createTabView(int position) {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.weekly_planner_tab_custom, null);
         TextView tabDayName = view.findViewById(R.id.tab_day_name);
