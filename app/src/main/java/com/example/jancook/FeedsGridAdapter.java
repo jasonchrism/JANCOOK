@@ -12,7 +12,7 @@ import java.util.List;
 public class FeedsGridAdapter extends RecyclerView.Adapter<FeedsGridAdapter.ViewHolder> {
 
     private Context context;
-    private List<Integer> imageList; // Use Integer if you use resource IDs, otherwise change to String for URLs
+    private List<Integer> imageList;
     private int columnWidth;
 
     public FeedsGridAdapter(Context context, List<Integer> imageList, int columnWidth) {
@@ -30,10 +30,10 @@ public class FeedsGridAdapter extends RecyclerView.Adapter<FeedsGridAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(imageList.get(position)); // Change to load image from URL if needed
+        holder.imageView.setImageResource(imageList.get(position));
         ViewGroup.LayoutParams params = holder.imageView.getLayoutParams();
         params.width = columnWidth;
-        params.height = columnWidth; // Set height equal to width to make it square
+        params.height = columnWidth;
         holder.imageView.setLayoutParams(params);
     }
 
@@ -48,7 +48,7 @@ public class FeedsGridAdapter extends RecyclerView.Adapter<FeedsGridAdapter.View
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP); // Ensure the scaleType is centerCrop
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         }
     }
 }

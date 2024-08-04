@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <corners android:radius="50dp" />
-    <solid android:color="@android:color/transparent" />
+<!-- res/drawable/rounded_image.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- Background color, change if needed -->
+    <corners android:radius="1000dp"/> <!-- Adjust the radius to make it round -->
 </shape>

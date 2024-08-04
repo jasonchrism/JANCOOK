@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true" >
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +41,6 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="21sp" />
-
         </RelativeLayout>
 
         <LinearLayout
@@ -60,7 +58,8 @@
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_image"
                 android:scaleType="centerCrop"
-                android:src="@drawable/useravatar" />
+                android:src="@drawable/useravatar"
+                android:clipToOutline="true" />
 
             <TextView
                 android:id="@+id/username"
@@ -198,18 +197,20 @@
                 android:textColor="@android:color/black" />
         </LinearLayout>
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/bg_color"/>
-        </androidx.viewpager.widget.ViewPager>
+            android:layout_height="500dp"
+            android:layout_marginBottom="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     </LinearLayout>
-</ScrollView>
+</ScrollView >

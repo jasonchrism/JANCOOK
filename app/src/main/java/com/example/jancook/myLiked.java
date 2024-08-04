@@ -84,9 +84,9 @@ public class myLiked extends Fragment {
     private RecyclerView recyclerView;
     private FeedsGridAdapter gridAdapter;
     private List<Integer> imageList = Arrays.asList(
-            R.drawable.food1, R.drawable.food2, R.drawable.food3, // Add your images here
-            R.drawable.food4, R.drawable.food5, R.drawable.food5,
-            R.drawable.food7, R.drawable.food8, R.drawable.food9
+            R.drawable.food14, R.drawable.food15, R.drawable.food9, // Add your images here
+            R.drawable.food16, R.drawable.food1, R.drawable.food17,
+            R.drawable.food18, R.drawable.food3, R.drawable.food10
     );
 
     private int getScreenWidth() {
