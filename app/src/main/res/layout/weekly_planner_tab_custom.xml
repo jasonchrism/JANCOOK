@@ -1,0 +1,28 @@
+<!-- res/layout/custom_tab.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/weekly_planner_tab_background_selector"
+    android:paddingVertical="4dp">
+
+    <TextView
+        android:id="@+id/tab_day_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textAlignment="center"
+        android:textColor="@drawable/tab_text_selector" />
+
+    <TextView
+        android:id="@+id/tab_day_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@drawable/tab_text_selector" />
+</LinearLayout>
