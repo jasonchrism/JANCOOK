@@ -7,14 +7,14 @@
     android:background="@color/bg_color"
     >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Add Post"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/primary"
-        />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="@color/black">
+      <Button
+          android:layout_width="100dp"
+          android:layout_height="100dp"/>
+  </LinearLayout>
 
 </FrameLayout>

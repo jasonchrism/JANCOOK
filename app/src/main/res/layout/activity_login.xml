@@ -10,13 +10,14 @@
 
     <ImageView
         android:id="@+id/logoImageView"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="210dp"
         android:background="@drawable/jancookflag"
         android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/SignInTV"
+        android:fontFamily="@font/poppins"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Sign In"
@@ -29,13 +30,15 @@
 
     <TextView
         android:id="@+id/SignInParagraph"
+        android:fontFamily="@font/poppins"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:text="Sign in now to access thousands of easy recipes, complete with step-by-step instructions and ingredient-based search features, and join a community of food enthusiasts sharing tips and culinary inspiration!"
         android:textColor="@color/white"
         android:textSize="12dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"/>
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"/>
 
 <!--    <EditText-->
 <!--        android:id="@+id/usernameEditText"-->
@@ -80,6 +83,7 @@
             android:id="@+id/usernameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:background="@drawable/custom_edittext"
             android:ems="10"
             android:hint="@string/username"
@@ -102,10 +106,12 @@
         app:hintTextColor="@color/text_gray"
         app:passwordToggleDrawable="@drawable/password_toggle"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/text_gray">
+        app:passwordToggleTint="@color/text_gray"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEditText"
+            android:fontFamily="@font/poppins"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_edittext"
@@ -121,28 +127,43 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
+    <TextView
+        android:id="@+id/forgetPasswordTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="Forget password?"
+        android:textColor="@color/white"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="12dp"/>
 
     <Button
         android:id="@+id/signInButton"
+        android:fontFamily="@font/poppins"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:text="Sign In"
         android:textSize="20dp"
-        android:layout_marginTop="42px" />
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"/>
+
 
     <TextView
         android:id="@+id/registerTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:fontFamily="@font/poppins"
         android:text="Don't have an account? Sign Up"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
+
         />
 
 </LinearLayout>

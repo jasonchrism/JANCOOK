@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_red_lighter"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    >
 
 <!--    logo artamara, sign up dll-->
     
@@ -17,7 +18,7 @@
 
         <ImageView
             android:id="@+id/logoImageView"
-            android:layout_width="410dp"
+            android:layout_width="match_parent"
             android:layout_height="210dp"
             android:background="@drawable/jancookflag"
             android:src="@drawable/logo" />
@@ -25,24 +26,28 @@
         <TextView
             android:id="@+id/SignUpTV"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="Sign Up"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/white"
             android:textSize="28dp"
             android:textStyle="bold"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
-            android:layout_marginTop="32dp" />
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"/>
 
         <TextView
             android:id="@+id/SignInParagraph"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:text="@string/SignUpParagraph"
             android:textColor="@color/white"
             android:textSize="12dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"/>
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"/>
 
         <!--    username-->
         <com.google.android.material.textfield.TextInputLayout
@@ -61,6 +66,7 @@
                 android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:background="@drawable/custom_edittext"
                 android:ems="10"
                 android:hint="@string/username"
@@ -89,6 +95,7 @@
                 android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:background="@drawable/custom_edittext"
                 android:ems="10"
                 android:hint="@string/email"
@@ -119,6 +126,7 @@
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:background="@drawable/custom_edittext"
                 android:ems="10"
                 android:hint="@string/password"
@@ -149,6 +157,7 @@
                 android:id="@+id/confirmPasswordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:background="@drawable/custom_edittext"
                 android:ems="10"
                 android:hint="@string/confirm_password"
@@ -167,7 +176,8 @@
             android:layout_height="50dp"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
-            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:text="Create account"
             android:textSize="20dp"
             android:layout_marginTop="42px" />
 
@@ -175,6 +185,7 @@
             android:id="@+id/loginTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:gravity="center"
             android:text="Already have an account? Sign In"
             android:textColor="@color/white"
