@@ -13,4 +13,6 @@
     <color name="primary_red">#B2454A</color>
     <color name="primary_red_lighter">#C16A6E</color>
     <color name="grey">#AAABB2</color>
+    <color name="black2">#2E2E2E</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

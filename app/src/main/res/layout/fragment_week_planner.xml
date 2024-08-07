@@ -1,20 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeekPlannerFragment"
+    android:orientation="vertical"
     android:background="@color/bg_color"
-    >
+    tools:context=".WeeklyPlannerActivity">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Week Planner"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/primary"
-        />
+        android:layout_height="wrap_content"
+        android:text="Weekly Planner"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="35dp"/>
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/weekly_planner_date_container">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1st Week of June"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/primary"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tlWeeklyPlanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/weekly_planner_date_container"
+            app:tabIndicatorHeight="0dp"
+            android:paddingBottom="8dp"
+            app:tabGravity="fill"
+            app:tabMode="scrollable" />
+
+    </LinearLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tlWeeklyPlanner" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You haven't do anything here..."
+            android:layout_marginHorizontal="28dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startBtn"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tvEmpty"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="28dp"
+            android:text="Start your journet now!"
+            app:cornerRadius="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_centerInParent="true"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
