@@ -23,12 +23,5 @@ public class editProfile extends AppCompatActivity {
             finish();
         });
 
-
-        EditText usernameEditText = findViewById(R.id.usernameEditText);
-        EditText nameEditText = findViewById(R.id.nameEditText);
-        EditText emailEditText = findViewById(R.id.emailEditText);
-        EditText bioEditText = findViewById(R.id.bioEditText);
-        EditText phoneEditText = findViewById(R.id.phoneEditText);
-
     }
 }

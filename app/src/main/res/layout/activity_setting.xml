@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="50dp"
+                android:layout_toEndOf="@id/backBtn"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="Setting"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:orientation="vertical"
+            tools:context=".ProfileActivity">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingfollowicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Follow and Invite Friends"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon2"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingnotificationicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon2"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Notifications"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon3"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                        android:src="@drawable/settingprivacyicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon3"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Account Privacy"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon4"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingsecurityicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon4"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Security"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Interactions"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_centerVertical="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon5"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingcommentsicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon5"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Comments"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon6"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingpostsicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon6"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Posts"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon7"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingmentionicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon7"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Mentions"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon8"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingmentionicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon8"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Activity Status"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Connections"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_centerVertical="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon9"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingcommentsicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon9"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Restricted Accounts"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon10"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingpostsicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon10"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Muted Accounts"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon11"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingmentionicon"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/leftIcon11"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Blocked Accounts"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/rightIcon11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settingrightdetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
