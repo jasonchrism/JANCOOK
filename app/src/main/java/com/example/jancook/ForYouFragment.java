@@ -38,7 +38,7 @@ public class ForYouFragment extends Fragment {
         feedModelList.add(new FeedModel(R.drawable.profile2, 30, 4, 120, 50, "John Doe", "Salad Beef Crunchy", "A vibrant mix of fresh greens, crisp vegetables, and savory toppings, creating a healthy, flavorful, and satisfying dish for any meal  a salad offers a delightful burst of ...", "10 hours ago", new ArrayList<SlideModel>(Arrays.asList(new SlideModel(R.drawable.food1, ScaleTypes.CENTER_CROP), new SlideModel(R.drawable.food1, ScaleTypes.CENTER_CROP), new SlideModel(R.drawable.food1, ScaleTypes.CENTER_CROP)))));
         feedModelList.add(new FeedModel(R.drawable.profile2, 30, 4, 120, 50, "John Doe", "Salad Beef Crunchy", "A vibrant mix of fresh greens, crisp vegetables, and savory toppings, creating a healthy, flavorful, and satisfying dish for any meal  a salad offers a delightful burst of ...", "10 hours ago", new ArrayList<SlideModel>(Arrays.asList(new SlideModel(R.drawable.food1, ScaleTypes.CENTER_CROP), new SlideModel(R.drawable.food1, ScaleTypes.CENTER_CROP), new SlideModel(R.drawable.food1, ScaleTypes.CENTER_CROP)))));
 
-        feedAdapter = new FeedAdapter(feedModelList);
+        feedAdapter = new FeedAdapter(getContext(), feedModelList);
         recyclerView.setAdapter(feedAdapter);
 //        feedAdapter.notifyDataSetChanged();
 

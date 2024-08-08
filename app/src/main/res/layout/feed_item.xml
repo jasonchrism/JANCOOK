@@ -97,7 +97,7 @@
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/comment_icon"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/commentCount"
@@ -112,7 +112,8 @@
             app:layout_constraintStart_toEndOf="@+id/commentBtn"
             app:layout_constraintTop_toTopOf="parent"
             android:includeFontPadding="false"
-            android:lineSpacingExtra="0dp"/>
+            android:lineSpacingExtra="0dp"
+            android:layout_marginStart="4dp"/>
 
         <ImageButton
             android:id="@+id/loveBtn"
@@ -123,7 +124,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/bookmarkBtn"
             app:layout_constraintStart_toStartOf="@+id/commentBtn"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/loveCount"
@@ -138,7 +139,8 @@
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/loveBtn"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="4dp"/>
 
         <ImageButton
             android:id="@+id/bookmarkBtn"
