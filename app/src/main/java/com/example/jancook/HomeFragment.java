@@ -1,8 +1,10 @@
 package com.example.jancook;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,7 +13,9 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.jancook.Adapter.StoryAdapter;
 import com.example.jancook.Adapter.VPAdapter;
@@ -34,6 +38,8 @@ public class HomeFragment extends Fragment {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
+    private boolean isLoveButtonSelected = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

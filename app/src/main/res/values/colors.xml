@@ -15,4 +15,7 @@
     <color name="grey">#AAABB2</color>
     <color name="black2">#2E2E2E</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="love_fill_color">#00000000</color> <!-- Default fill color -->
+    <color name="love_stroke_color">#AAABB2</color> <!-- Default stroke color -->
+    <color name="love_fill_color_selected">#F30F0F</color>
 </resources>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/rounded_bottom_sheet">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+    <TextView
+        android:id="@+id/tvCommentCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comment (4)"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/comment1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCommentCount">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="10dp"
+            android:padding="3dp"
+            android:background="@drawable/bg_white_story"
+            android:src="@drawable/profile2"
+            />
+
+        <TextView
+            android:id="@+id/username1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/profile1"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Alex Marquez"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBaseline="@id/username1"
+            android:text="Yesterday, 09:34"
+            android:textSize="12sp"
+            android:textColor="@color/grey" />
+
+        <!-- Message Body -->
+        <TextView
+            android:id="@+id/message_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username1"
+            android:layout_toEndOf="@id/profile1"
+            android:text="hey your food looks so delicious, can I taste it?"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp" />
+
+        <RelativeLayout
+            android:id="@+id/wrapSeeMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_body"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/seeReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See reply (2)"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_up"
+                android:layout_toEndOf="@id/seeReply"
+                android:layout_marginStart="4dp"
+                android:layout_centerVertical="true"/>
+
+
+        </RelativeLayout>
+        <!-- Reply 2 -->
+        <RelativeLayout
+            android:id="@+id/reply_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wrapSeeMore"
+            android:layout_marginStart="52dp"
+            android:paddingTop="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="10dp"
+                android:padding="3dp"
+                android:background="@drawable/bg_white_story"
+                android:src="@drawable/profile2"
+                />
+
+            <TextView
+                android:id="@+id/username_reply_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/profile2"
+                android:layout_alignTop="@id/profile2"
+                android:text="Alex Sacramento"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/timestamp_reply_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@id/username_reply_2"
+                android:text="Yesterday, 09:34"
+                android:textSize="12sp"
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:id="@+id/message_body_reply_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username_reply_2"
+                android:layout_toEndOf="@id/profile2"
+                android:text="hey your food looks so delicious, can I taste it?"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp" />
+    </RelativeLayout>
+        <!-- Reply 3 -->
+        <RelativeLayout
+            android:id="@+id/reply_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reply_2"
+            android:layout_marginStart="52dp"
+            android:paddingTop="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="10dp"
+                android:padding="3dp"
+                android:background="@drawable/bg_white_story"
+                android:src="@drawable/profile2"
+                />
+
+            <TextView
+                android:id="@+id/username_reply_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/profile3"
+                android:layout_alignTop="@id/profile3"
+                android:text="Alex Sacramento"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/timestamp_reply_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@id/username_reply_3"
+                android:text="Yesterday, 09:34"
+                android:textSize="12sp"
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:id="@+id/message_body_reply_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username_reply_3"
+                android:layout_toEndOf="@id/profile3"
+                android:text="hey your food looks so delicious, can I taste it?"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/comment4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reply_3"
+            android:layout_marginTop="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="10dp"
+                android:padding="3dp"
+                android:background="@drawable/bg_white_story"
+                android:src="@drawable/profile2"
+                />
+
+            <TextView
+                android:id="@+id/username4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/profile4"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Alex Marquez"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/timestamp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@id/username4"
+                android:text="Yesterday, 09:34"
+                android:textSize="12sp"
+                android:textColor="@color/grey" />
+
+            <!-- Message Body -->
+            <TextView
+                android:id="@+id/message_body4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username4"
+                android:layout_toEndOf="@id/profile4"
+                android:text="hey your food looks so delicious, can I taste it?"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/comment5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment4"
+            android:layout_marginTop="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="10dp"
+                android:padding="3dp"
+                android:background="@drawable/bg_white_story"
+                android:src="@drawable/profile2"
+                />
+
+            <TextView
+                android:id="@+id/username5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/profile5"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Alex Marquez"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/timestamp5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@id/username5"
+                android:text="Yesterday, 09:34"
+                android:textSize="12sp"
+                android:textColor="@color/grey" />
+
+            <!-- Message Body -->
+            <TextView
+                android:id="@+id/message_body5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username5"
+                android:layout_toEndOf="@id/profile5"
+                android:text="hey your food looks so delicious, can I taste it?"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wrapInputComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:layout_below="@+id/comment5">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="10dp"
+                android:padding="3dp"
+                android:background="@drawable/bg_white_story"
+                android:src="@drawable/profile2"
+                />
+            <EditText
+                android:id="@+id/edit_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/profile6"
+                android:layout_toStartOf="@+id/send_button"
+                android:layout_centerVertical="true"
+                android:hint="Type a message"
+                android:background="@drawable/edit_text_background"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="8dp"
+                android:singleLine="true"
+                android:textSize="16dp"/>
+
+            <ImageView
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_send" />
+        </RelativeLayout>
+</RelativeLayout>
+
+</RelativeLayout>
