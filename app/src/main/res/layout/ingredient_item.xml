@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/ingredientName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
+        android:padding="8dp"
+        android:textSize="14sp"/>
+<!--        android:text="Ingredient" />-->
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/delete_button_create_item"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Delete ingredient" />
+</LinearLayout>
