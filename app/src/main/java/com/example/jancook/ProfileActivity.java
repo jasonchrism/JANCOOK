@@ -75,6 +75,13 @@ public class ProfileActivity extends AppCompatActivity {
             Intent intent = new Intent(ProfileActivity.this, editProfile.class);
             startActivity(intent);
         });
+
+        //setting
+        ImageView  settingButton = findViewById(R.id.settingBtn);
+        settingButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileActivity.this, Setting.class);
+            startActivity(intent);
+        });
     }
 
     private View getTabView(int position, boolean isSelected) {

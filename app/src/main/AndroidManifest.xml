@@ -13,10 +13,7 @@
         android:theme="@style/Theme.JANCOOK"
         tools:targetApi="31">
         <activity
-            android:name=".activity_post2"
-            android:exported="false" />
-        <activity
-            android:name=".PostActivity"
+            android:name=".Setting"
             android:exported="false" />
         <activity
             android:name=".FilledWeeklyPlanner"
