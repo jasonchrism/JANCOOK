@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -56,6 +57,12 @@ public class HomeFragment extends Fragment {
                 Intent intent = new Intent(getContext(), SearchActivity.class);
                 startActivity(intent);
             }
+        });
+
+        ImageView notificationBtn = view.findViewById(R.id.notificationBtn);
+        notificationBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), NotificationActivity.class);
+            startActivity(intent);
         });
 
         // story
