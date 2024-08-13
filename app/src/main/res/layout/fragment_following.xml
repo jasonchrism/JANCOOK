@@ -3,13 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".FollowingFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ForYouFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feed_recyclerView_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Following fragment"
-        android:gravity="center"/>
+        android:scrollbars="none"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/feed_item"
+        />
 
 </FrameLayout>

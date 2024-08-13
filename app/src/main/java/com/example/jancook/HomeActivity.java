@@ -51,8 +51,8 @@ public class HomeActivity extends AppCompatActivity {
                     selectedFragment = new ProfileFragment();
                     break;
                 case R.id.post:
-                    selectedFragment = new PostFragment();
-                    break;
+//                    selectedFragment = new PostFragment();
+                    return true;
             }
             if (selectedFragment != null) {
                 replaceFragment(selectedFragment);
@@ -61,11 +61,8 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         binding.post.setOnClickListener(v -> {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frame_layout, new PostFragment()); // Make sure to use the correct container ID
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            Intent i = new Intent(HomeActivity.this, PostActivity.class);
+            startActivity(i);
         });
     }
 

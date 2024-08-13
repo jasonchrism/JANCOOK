@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
-        android:text="Kenalan yuk! Scan QR code ini untuk terhubung denganku di JANCOOK"
+        android:text="Let's get acquainted! Scan this QR code to connect with me on JANCOOK"
         android:textAlignment="center"
         android:textColor="#888"
         android:textSize="14sp" />
