@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
@@ -22,6 +23,7 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.jancook.HomeFragment;
 import com.example.jancook.Model.FeedModel;
 import com.example.jancook.PostDetailActivity;
+import com.example.jancook.ProfileActivity2;
 import com.example.jancook.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -82,6 +84,8 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         TextView durationId, portionId, loveCountId, commentCountId, usernameId, titleId, descriptionId, timePostId;
         ImageButton loveBtn, bookmarkBtn;
         ImageSlider feedImageId;
+
+        ConstraintLayout header;
 
         private boolean isLoveButtonSelected = false;
         private boolean isBookmarkButtonSelected = false;
@@ -154,6 +158,15 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
 
                     // Start the activity
                     view.getContext().startActivity(iDetail);
+                }
+            });
+
+            header = itemView.findViewById(R.id.wrap_header);
+            header.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent iProfile = new Intent(view.getContext(), ProfileActivity2.class);
+                    view.getContext().startActivity(iProfile);
                 }
             });
 
