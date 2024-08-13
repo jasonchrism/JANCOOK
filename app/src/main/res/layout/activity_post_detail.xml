@@ -1,0 +1,610 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F5">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostDetailActivity">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/imageSlider"
+        android:layout_marginBottom="8dp"
+        tools:ignore="MissingConstraints">
+
+    </com.denzcoskun.imageslider.ImageSlider>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:tint="@color/white"
+        android:layout_alignTop="@id/imageSlider"
+        android:layout_alignStart="@id/imageSlider"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/wrap_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_below="@id/imageSlider">
+
+        <ImageButton
+            android:id="@+id/commentBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/comment_icon"
+            android:scaleType="fitCenter"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/commentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="650"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:layout_toEndOf="@id/commentBtn"
+            android:layout_marginStart="4dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:id="@+id/loveBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/love_icon"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/loveCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:text="125k"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:layout_toEndOf="@id/loveBtn"
+            android:layout_marginStart="4dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:id="@+id/bookmarkBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/bookmark_icon"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wrap_btn"
+        android:layout_marginHorizontal="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleTextView"
+            android:text="Salad"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePostTextView"
+            android:layout_below="@+id/titleTextView"
+            android:text="Salad"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/grey"
+            android:textSize="14dp"
+            android:layout_marginBottom="8dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/wrap_user"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/timePostTextView">
+
+            <!-- Profile Image -->
+            <FrameLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/bg_white_story"
+                    android:src="@drawable/profile2" />
+            </FrameLayout>
+
+            <!-- User Name -->
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doeloe"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_toEndOf="@id/frameLayout2"
+                android:layout_alignTop="@id/frameLayout2"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <!-- Username -->
+            <TextView
+                android:id="@+id/userHandle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@Doeloeoe"
+                android:textColor="@color/grey"
+                android:textSize="13sp"
+                android:layout_below="@id/usernameTextView"
+                android:layout_toEndOf="@id/frameLayout2"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/poppins"/>
+
+            <FrameLayout
+                android:id="@+id/buttonContainer"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:background="@drawable/rounded_button"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <Button
+                    android:id="@+id/followButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Follow"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:background="@android:color/transparent"
+                    android:textAllCaps="false" />
+
+            </FrameLayout>
+
+            <!-- Follow Button -->
+<!--            <Button-->
+<!--                android:id="@+id/followButton"-->
+<!--                android:layout_width="90dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:text="Follow"-->
+<!--                android:textSize="10sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:paddingStart="16dp"-->
+<!--                android:paddingEnd="16dp"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:background="@drawable/button_background_selector"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:textAllCaps="false"/>-->
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fullDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wrap_user"
+            android:layout_marginTop="8dp"
+            android:text="A vibrant mix of fresh greens, crisp vegetables, and savory toppings, creating a healthy, flavorful, and satisfying dish for any meal  a salad offers a delightful burst of i dont know what im typing for now, but you can read this anyway"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:textSize="14sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/wrap_portion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fullDesc"
+            android:layout_marginTop="8dp">
+
+            <!-- Profile Icon -->
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile_home_icon"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <!-- Portion Text -->
+            <TextView
+                android:id="@+id/portionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 person"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:layout_toEndOf="@id/imageView3"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp" />
+
+            <!-- Clock Icon -->
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitCenter"
+                android:layout_toEndOf="@id/portionTextView"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/clock_icon" />
+
+            <!-- Duration Text -->
+            <TextView
+                android:id="@+id/durationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="30 minutes"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:layout_toEndOf="@id/imageView4"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingredientHeader"
+            android:text="Ingredients"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_below="@id/wrap_portion"
+            />
+
+        <TextView
+            android:id="@+id/ingredient1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:text="1.  5 cloves of shallot"
+            android:layout_below="@id/ingredientHeader"/>
+
+        <TextView
+            android:id="@+id/ingredient2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:text="2. 3 cloves of garlic"
+            android:layout_below="@id/ingredient1"/>
+        <TextView
+            android:id="@+id/ingredient3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:text="3. 3 stalks of green onion"
+            android:layout_below="@id/ingredient2"/>
+        <TextView
+            android:id="@+id/ingredient4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:text="4. 1 tablespoon of sesame oil"
+            android:layout_below="@id/ingredient3"/>
+        <TextView
+            android:id="@+id/ingredient5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:text="5. 1/2 tablespoon of light soy sauce"
+            android:layout_below="@id/ingredient4"/>
+        <TextView
+            android:id="@+id/ingredient6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:text="6. 2 dragon fruit"
+            android:layout_below="@id/ingredient5"/>
+        <TextView
+            android:id="@+id/ingredient7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:text="7. 1/2 tablespoon of salt"
+            android:layout_below="@id/ingredient6"/>
+
+        <RelativeLayout
+            android:id="@+id/wrap_steps1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingredient7"
+            android:layout_marginTop="8dp">
+
+            <!-- Step Header -->
+            <TextView
+                android:id="@+id/stepHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steps"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <!-- Step Number Circle -->
+            <TextView
+                android:id="@+id/stepNumber"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/stepHeader"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:background="@drawable/circle_background"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <!-- Step Description -->
+            <TextView
+                android:id="@+id/stepDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/stepNumber"
+                android:layout_below="@id/stepHeader"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:text="A vibrant mix of fresh greens, crisp vegetables, and savory toppings, creating a healthy, flavorful, and satisfying dish for any meal."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:autoLink="none"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- Image Gallery -->
+            <LinearLayout
+                android:id="@+id/imageGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stepDescription"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="44dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/food1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_background"
+                    android:clipToOutline="true"
+                    />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/food1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_background"
+                    android:clipToOutline="true"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/food1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_background"
+                    android:clipToOutline="true"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wrap_steps2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wrap_steps1"
+            android:layout_marginTop="8dp">
+
+            <!-- Step Number Circle -->
+            <TextView
+                android:id="@+id/stepNumber2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:background="@drawable/circle_background"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <!-- Step Description -->
+            <TextView
+                android:id="@+id/stepDescription2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/stepNumber2"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:text="A vibrant mix of fresh greens, crisp vegetables, and savory toppings, creating a healthy, flavorful, and satisfying dish for any meal."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:autoLink="none"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- Image Gallery -->
+            <LinearLayout
+                android:id="@+id/imageGallery2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stepDescription2"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="44dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/food1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_background"
+                    android:clipToOutline="true"
+                    />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/food1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_background"
+                    android:clipToOutline="true"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/food1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_background"
+                    android:clipToOutline="true"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wrap_steps3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wrap_steps2"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Step Number Circle -->
+            <TextView
+                android:id="@+id/stepNumber3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:background="@drawable/circle_background"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <!-- Step Description -->
+            <TextView
+                android:id="@+id/stepDescription3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/stepNumber3"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:text="A vibrant mix of fresh greens, crisp vegetables, and savory toppings, creating a healthy, flavorful, and satisfying dish for any meal."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:autoLink="none"
+                android:fontFamily="@font/poppins"/>
+
+            <!-- Image Gallery -->
+            <LinearLayout
+                android:id="@+id/imageGallery3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stepDescription3"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="44dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/food1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_background"
+                    android:clipToOutline="true"
+                    />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/food1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_background"
+                    android:clipToOutline="true"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/food1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_background"
+                    android:clipToOutline="true"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+</ScrollView>
