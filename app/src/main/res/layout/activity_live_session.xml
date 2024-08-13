@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="50dp"
+                android:layout_toRightOf="@id/backBtn"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="Go Live Now!"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+        </RelativeLayout>
+
+        <!-- Live Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Live Title"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/live_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/custom_edittext"
+            android:hint="Enter live session title"
+            android:padding="16dp" />
+
+        <!-- Short Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Short Description"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/short_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/custom_edittext"
+            android:hint="Enter a short description"
+            android:padding="16dp" />
+
+        <!-- Topic Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="What are you doing / what is the topic?"
+            android:textColor="@color/black" />
+
+        <!-- Topic Buttons -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            android:rowOrderPreserved="false">
+
+            <ToggleButton
+                android:id="@+id/topic_button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/topic_toggle_button_background"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="Cooking"
+                android:textOn="Cooking"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/topic_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/topic_toggle_button_background"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="Sharing"
+                android:textOn="Sharing"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/topic_button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/topic_toggle_button_background"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="Tips"
+                android:textOn="Tips"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/topic_button_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/topic_toggle_button_background"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="Vegetarian"
+                android:textOn="Vegetarian"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/topic_button_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/topic_toggle_button_background"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="Review"
+                android:textOn="Review"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/topic_button_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/topic_toggle_button_background"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="AMSR"
+                android:textOn="AMSR"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/topic_button_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/topic_toggle_button_background"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="diet"
+                android:textOn="Diet"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/topic_button_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/topic_toggle_button_background"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="fried"
+                android:textOn="fried"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/topic_button_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/topic_toggle_button_background"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="boiled"
+                android:textOn="boiled"
+                android:textSize="12sp" />
+
+        </GridLayout>
+
+
+        <!-- Checklist Agreement -->
+        <CheckBox
+            android:id="@+id/agreement_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="180dp"
+            android:text="I agree to the terms and conditions" />
+
+        <!-- Start Live Session Button -->
+        <Button
+            android:id="@+id/start_live_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/primary"
+            android:padding="10dp"
+            android:text="Go Live"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

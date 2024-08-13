@@ -1,5 +1,6 @@
 package com.example.jancook;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,15 +9,19 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jancook.Adapter.FilledWeeklyPlannerPagerAdapter;
+import com.example.jancook.Adapter.WeeklyPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class WeekPlannerFragment extends Fragment {
 
     TabLayout tlWeeklyPlanner;
+    private Button startJourney;
     private ViewPager2 viewPager;
     private static final String[] DAYS = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     private static final int[] DAY_NUMBERS = {3, 4, 5, 6, 7, 8, 9};
@@ -30,7 +35,17 @@ public class WeekPlannerFragment extends Fragment {
         tlWeeklyPlanner = view.findViewById(R.id.tlWeeklyPlanner);
         viewPager = view.findViewById(R.id.viewPager);
 
-        viewPager.setAdapter(new FilledWeeklyPlannerPagerAdapter(this));
+        startJourney =view.findViewById(R.id.startBtn);
+        startJourney.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ItemIngredients.class);
+                startActivity(intent);
+            }
+        });
+
+
+        viewPager.setAdapter(new WeeklyPagerAdapter(this));
 
         new TabLayoutMediator(tlWeeklyPlanner, viewPager, (tab, position) -> {
             tab.setCustomView(createTabView(position));

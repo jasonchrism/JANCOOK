@@ -5,7 +5,10 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -25,6 +28,15 @@ public class SearchActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         searchView = findViewById(R.id.search);
+        ImageView searchButton = findViewById(R.id.backBtn);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle the click event
+                Intent intent = new Intent(SearchActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
 
         searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -51,6 +63,14 @@ public class SearchActivity extends AppCompatActivity {
         androidData = new DataSearchClass("Trending in English" , "#EsDawet" , "1760 post");
         dataSearchClassList.add(androidData);
         androidData = new DataSearchClass("Trending in Germany" , "#RujakCingur" , "3454 post");
+        dataSearchClassList.add(androidData);
+        androidData = new DataSearchClass("Trending in Malaysia" , "#Martabak" , "6545 post");
+        dataSearchClassList.add(androidData);
+        androidData = new DataSearchClass("Trending in Singapore" , "#SotoAyam" , "2214 post");
+        dataSearchClassList.add(androidData);
+        androidData = new DataSearchClass("Trending in Laos" , "#Rendang" , "9007 post");
+        dataSearchClassList.add(androidData);
+        androidData = new DataSearchClass("Trending in Honduras" , "#Tacos" , "6678 post");
         dataSearchClassList.add(androidData);
 
         searchAdapter = new SearchAdapter(SearchActivity.this, dataSearchClassList);

@@ -10,7 +10,7 @@ import com.example.jancook.DayFragment;
 
 public class WeeklyPagerAdapter extends FragmentStateAdapter {
 
-    public WeeklyPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
+    public WeeklyPagerAdapter(@NonNull Fragment fragmentActivity) {
         super(fragmentActivity);
     }
 
