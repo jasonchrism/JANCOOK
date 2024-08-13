@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="50dp"
+                android:layout_toEndOf="@id/backBtn"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="Notification"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:orientation="vertical"
+            tools:context=".ProfileActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Today"
+                android:textStyle="italic"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_centerVertical="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/useravatar1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar" />
+
+                <TextView
+                    android:id="@+id/username1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useravatar1"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="John Doelo"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+                <TextView
+                    android:id="@+id/useraction1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/username1"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="like your post"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/userhour1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useraction1"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="5h"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:background="@drawable/rounded_bg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:src="@drawable/food1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp">
+
+                <!-- User Avatar -->
+                <ImageView
+                    android:id="@+id/useravatar2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar" />
+
+                <!-- User Name -->
+                <TextView
+                    android:id="@+id/username2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/useravatar2"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="John Doelo"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/useraction22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/username2"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Started Following"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Action Description -->
+                <TextView
+                    android:id="@+id/useraction2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username2"
+                    android:layout_alignStart="@id/username2"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="You."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:id="@+id/userhour3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username2"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/useraction2"
+                    android:fontFamily="@font/poppins"
+                    android:text="5h"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <!-- Following Button -->
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/primary"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Following"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Yesterday"
+                android:textStyle="italic"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_centerVertical="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp">
+
+                <!-- User Avatar -->
+                <ImageView
+                    android:id="@+id/useravatar3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar2" />
+
+                <!-- User Name -->
+                <TextView
+                    android:id="@+id/username3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/useravatar3"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Malice Lay"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/useraction33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/username3"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Commented :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Action Description -->
+                <TextView
+                    android:id="@+id/useraction3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username3"
+                    android:layout_alignStart="@id/username3"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Wah keren banget ini..."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username3"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/useraction3"
+                    android:fontFamily="@font/poppins"
+                    android:text="1d"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <!-- Following Button -->
+                <ImageView
+                    android:background="@drawable/rounded_bg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:src="@drawable/food2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/useravatar4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar2" />
+
+                <TextView
+                    android:id="@+id/username4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useravatar4"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Malice Lay"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+                <TextView
+                    android:id="@+id/useraction4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/username4"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="like your post"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/userhour4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useraction4"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="1d"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:background="@drawable/rounded_bg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:src="@drawable/food13"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp">
+
+                <!-- User Avatar -->
+                <ImageView
+                    android:id="@+id/useravatar5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar2" />
+
+                <!-- User Name -->
+                <TextView
+                    android:id="@+id/username5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/useravatar5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Malice Lay"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/useraction55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/username5"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Started Following"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Action Description -->
+                <TextView
+                    android:id="@+id/useraction5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username5"
+                    android:layout_alignStart="@id/username5"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="You."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:id="@+id/userhour5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username5"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/useraction5"
+                    android:fontFamily="@font/poppins"
+                    android:text="1d"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <!-- Following Button -->
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/primary"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Followed"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Last 7 Days"
+                android:textStyle="italic"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_centerVertical="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp">
+
+                <!-- User Avatar -->
+                <ImageView
+                    android:id="@+id/useravatar6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar3" />
+
+                <!-- User Name -->
+                <TextView
+                    android:id="@+id/username6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/useravatar6"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Budi Abadi"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/useraction66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/username6"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Commented :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Action Description -->
+                <TextView
+                    android:id="@+id/useraction6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username6"
+                    android:layout_alignStart="@id/username6"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Mantap, enak..."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username6"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/useraction6"
+                    android:fontFamily="@font/poppins"
+                    android:text="2d"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <!-- Following Button -->
+                <ImageView
+                    android:background="@drawable/rounded_bg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:src="@drawable/food6"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/useravatar7"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar3" />
+
+                <TextView
+                    android:id="@+id/username7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useravatar7"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Budi Abadi"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+                <TextView
+                    android:id="@+id/useraction7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/username7"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="like your post"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/userhour7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useraction7"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="3d"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:background="@drawable/rounded_bg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:src="@drawable/food13"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp">
+
+                <!-- User Avatar -->
+                <ImageView
+                    android:id="@+id/useravatar8"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar4" />
+
+                <!-- User Name -->
+                <TextView
+                    android:id="@+id/username8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/useravatar8"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Julie Junie"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/useraction88"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/username8"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Started Following"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Action Description -->
+                <TextView
+                    android:id="@+id/useraction8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username8"
+                    android:layout_alignStart="@id/username8"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="You."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:id="@+id/userhour8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username8"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/useraction8"
+                    android:fontFamily="@font/poppins"
+                    android:text="5d"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <!-- Following Button -->
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/primary"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Followed"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Last 30 Days"
+                android:textStyle="italic"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_centerVertical="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/useravatar10"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar5" />
+
+                <TextView
+                    android:id="@+id/username10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useravatar10"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Anna Bell"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+                <TextView
+                    android:id="@+id/useraction10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/username10"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="like your post"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/userhour10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useraction10"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="8d"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:background="@drawable/rounded_bg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:src="@drawable/food10"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/useravatar11"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar6" />
+
+                <TextView
+                    android:id="@+id/username11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useravatar11"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="John Thor"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+                <TextView
+                    android:id="@+id/useraction11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/username11"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="like your post"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/userhour11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/useraction11"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="10d"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:background="@drawable/rounded_bg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:src="@drawable/food6"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="30dp">
+
+                <!-- User Avatar -->
+                <ImageView
+                    android:id="@+id/useravatar12"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/useravatar6" />
+
+                <!-- User Name -->
+                <TextView
+                    android:id="@+id/username12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/useravatar12"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="John Thor"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/useraction1212"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/username12"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Commented :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Action Description -->
+                <TextView
+                    android:id="@+id/useraction12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username12"
+                    android:layout_alignStart="@id/username12"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Ini takarannya berapa ya..."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username12"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/useraction12"
+                    android:fontFamily="@font/poppins"
+                    android:text="12d"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <!-- Following Button -->
+                <ImageView
+                    android:background="@drawable/rounded_bg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:src="@drawable/food15"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

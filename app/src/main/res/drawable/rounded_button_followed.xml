@@ -1,0 +1,5 @@
+<!-- res/drawable/rounded_button_followed.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/grey" /> <!-- Grey color for followed state -->
+    <corners android:radius="10dp" />
+</shape>
