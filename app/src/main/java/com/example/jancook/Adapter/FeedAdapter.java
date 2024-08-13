@@ -1,6 +1,7 @@
 package com.example.jancook.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.VectorDrawable;
@@ -20,6 +21,7 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.jancook.HomeFragment;
 import com.example.jancook.Model.FeedModel;
+import com.example.jancook.PostDetailActivity;
 import com.example.jancook.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -131,6 +133,29 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
                 }
             });
 
+            descriptionId.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    FeedModel model = modelList.get(getAdapterPosition());
+
+                    // Create an Intent to navigate to PostDetailActivity
+                    Intent iDetail = new Intent(view.getContext(), PostDetailActivity.class);
+
+                    // Pass the data to PostDetailActivity
+                    iDetail.putExtra("profileImage", model.getProfileImage());
+                    iDetail.putExtra("duration", model.getDuration());
+                    iDetail.putExtra("portion", model.getPortion());
+                    iDetail.putExtra("loveCount", model.getLoveCount());
+                    iDetail.putExtra("commentCount", model.getCommentCount());
+                    iDetail.putExtra("username", model.getUsername());
+                    iDetail.putExtra("title", model.getTitle());
+                    iDetail.putExtra("description", model.getDescription());
+                    iDetail.putExtra("timePost", model.getTimePost());
+
+                    // Start the activity
+                    view.getContext().startActivity(iDetail);
+                }
+            });
 
         }
 
