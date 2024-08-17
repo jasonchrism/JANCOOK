@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/bg_color"
-    tools:context=".WeeklyPlannerActivity">
+    tools:context=".WeekPlannerFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -49,28 +49,28 @@
 
     </LinearLayout>
 
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tlWeeklyPlanner" />
+<!--    <androidx.viewpager2.widget.ViewPager2-->
+<!--        android:id="@+id/viewPager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@id/tlWeeklyPlanner" />-->
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp">
 
         <TextView
             android:id="@+id/tvEmpty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="You haven't do anything here..."
-            android:layout_marginHorizontal="28dp"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:layout_marginBottom="20dp"
             android:layout_centerInParent="true"
-            android:fontFamily="@font/poppins_bold" />
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="You haven't do anything here..."
+            android:textColor="@color/black"
+            android:textSize="24sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/startBtn"
@@ -87,8 +87,4 @@
             android:textSize="16sp" />
 
     </RelativeLayout>
-
-
-
-
 </LinearLayout>
