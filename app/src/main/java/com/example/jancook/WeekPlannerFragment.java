@@ -23,6 +23,7 @@ public class WeekPlannerFragment extends Fragment {
     TabLayout tlWeeklyPlanner;
     private Button startJourney;
     private ViewPager2 viewPager;
+    Button startBtn;
     private static final String[] DAYS = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     private static final int[] DAY_NUMBERS = {3, 4, 5, 6, 7, 8, 9};
 
@@ -33,9 +34,10 @@ public class WeekPlannerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_week_planner, container, false);
 
         tlWeeklyPlanner = view.findViewById(R.id.tlWeeklyPlanner);
-        viewPager = view.findViewById(R.id.viewPager);
+//        viewPager = view.findViewById(R.id.viewPager);
 
-        startJourney =view.findViewById(R.id.startBtn);
+        startJourney = view.findViewById(R.id.startBtn);
+
         startJourney.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,18 +47,18 @@ public class WeekPlannerFragment extends Fragment {
         });
 
 
-        viewPager.setAdapter(new WeeklyPagerAdapter(this));
-
-        new TabLayoutMediator(tlWeeklyPlanner, viewPager, (tab, position) -> {
-            tab.setCustomView(createTabView(position));
-        }).attach();
-
-        if (tlWeeklyPlanner.getTabAt(0) != null) {
-            View view1 = tlWeeklyPlanner.getTabAt(0).getCustomView();
-            if (view1 != null) {
-                view1.setSelected(true);
-            }
-        }
+//        viewPager.setAdapter(new WeeklyPagerAdapter(this));
+//
+//        new TabLayoutMediator(tlWeeklyPlanner, viewPager, (tab, position) -> {
+//            tab.setCustomView(createTabView(position));
+//        }).attach();
+//
+//        if (tlWeeklyPlanner.getTabAt(0) != null) {
+//            View view1 = tlWeeklyPlanner.getTabAt(0).getCustomView();
+//            if (view1 != null) {
+//                view1.setSelected(true);
+//            }
+//        }
         return view;
     }
 
