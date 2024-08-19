@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -18,6 +19,7 @@ public class LiveSession extends AppCompatActivity {
     private ToggleButton topicButton1, topicButton2, topicButton3 ,topicButton4, topicButton5, topicButton6 ,topicButton7, topicButton8, topicButton9  ;
     private CheckBox agreementCheckbox;
     private Button startLiveButton;
+    private ImageButton backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,16 @@ public class LiveSession extends AppCompatActivity {
         topicButton9 = findViewById(R.id.topic_button_9);
         agreementCheckbox = findViewById(R.id.agreement_checkbox);
         startLiveButton = findViewById(R.id.start_live_button);
+        backBtn = findViewById(R.id.backBtn);
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(LiveSession.this, HomeActivity.class);
+                    startActivity(intent);
+
+            }
+        });
 
         // Set click listener for the start button
         startLiveButton.setOnClickListener(new View.OnClickListener() {
