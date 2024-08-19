@@ -46,7 +46,7 @@ public class activity_post2 extends AppCompatActivity {
         });
 
         nextButton.setOnClickListener(view -> {
-            Intent intent = new Intent(activity_post2.this, HomeActivity.class);
+            Intent intent = new Intent(activity_post2.this, post3.class);
             startActivity(intent);
         });
 
