@@ -69,10 +69,10 @@ public class HomeFragment extends Fragment {
         recyclerView = view.findViewById(R.id.story_recyclerView_id);
 
         modelList.add(new StoryModel(ADD_STORY_TYPE, "1", R.drawable.profile2));
-        modelList.add(new StoryModel(ALL_STORY_TYPE, "2", "10", "John Doe", R.drawable.profile2));
-        modelList.add(new StoryModel(ALL_STORY_TYPE, "3", "11", "John Doe", R.drawable.profile2));
-        modelList.add(new StoryModel(ALL_STORY_TYPE, "4", "12", "John Doe", R.drawable.profile2));
-        modelList.add(new StoryModel(ALL_STORY_TYPE, "5", "13", "John Doe", R.drawable.profile2));
+        modelList.add(new StoryModel(ALL_STORY_TYPE, "2", "10", "Jason C", R.drawable.pp3));
+        modelList.add(new StoryModel(ALL_STORY_TYPE, "3", "11", "Jason C", R.drawable.pp3));
+        modelList.add(new StoryModel(ALL_STORY_TYPE, "4", "12", "Jason C", R.drawable.pp3));
+        modelList.add(new StoryModel(ALL_STORY_TYPE, "5", "13", "Jason C", R.drawable.pp3));
 
         adapter = new StoryAdapter(modelList);
         recyclerView.setAdapter(adapter);

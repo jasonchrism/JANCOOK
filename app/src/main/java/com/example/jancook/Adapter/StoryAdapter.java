@@ -1,6 +1,7 @@
 package com.example.jancook.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.AttributeSet;
@@ -15,6 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.jancook.LiveSession;
+import com.example.jancook.LiveStartedActivity;
+import com.example.jancook.LiveStarttedViewer;
 import com.example.jancook.Model.StoryModel;
 import com.example.jancook.R;
 
@@ -52,12 +56,20 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
             String uid = model.getUid();
             int image = model.getImage();
             holder.setLiveStory(uid, image);
+            holder.itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(v.getContext(), LiveSession.class);
+                v.getContext().startActivity(intent);
+            });
         }else{
             String uid = model.getUid();
             String sid = model.getSid();
             String name = model.getName();
             int image = model.getImage();
             holder.setStory(uid, sid, name, image);
+            holder.itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(v.getContext(), LiveStarttedViewer.class);
+                v.getContext().startActivity(intent);
+            });
         }
     }
 
@@ -85,10 +97,18 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
             username = itemView.findViewById(R.id.username_id);
             profileImg = itemView.findViewById(R.id.userProfile_id);
 
-            profileImg.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    System.out.println("clicked");
+            profileImg.setOnClickListener(v -> {
+                int position = getAdapterPosition();
+                int viewType = getItemViewType();
+
+                if (viewType == ADD_STORY_TYPE) {
+                    // Redirect to ActivityA (LiveSession)
+                    Intent intent = new Intent(v.getContext(), LiveSession.class);
+                    v.getContext().startActivity(intent);
+                } else if (viewType == ALL_STORY_TYPE) {
+                    // Redirect to ActivityB (LiveStarttedViewer)
+                    Intent intent = new Intent(v.getContext(), LiveStarttedViewer.class);
+                    v.getContext().startActivity(intent);
                 }
             });
 

@@ -110,8 +110,8 @@ public class PostDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(PostDetailActivity.this, R.style.BottomSheetTheme);
-                View view1 = LayoutInflater.from(PostDetailActivity.this).inflate(R.layout.comment_layout_sheet, null);
-                bottomSheetDialog.setContentView(view1);
+                View view2 = LayoutInflater.from(PostDetailActivity.this).inflate(R.layout.comment_layout_sheet, null);
+                bottomSheetDialog.setContentView(view2);
                 bottomSheetDialog.show();
             }
         });
