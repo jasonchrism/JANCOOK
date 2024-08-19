@@ -19,6 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.jancook.Model.Ingredient;
 
@@ -34,7 +36,8 @@ public class ItemIngredients extends AppCompatActivity {
     private IngredientAdapter searchResultsAdapter;
     private ListView searchResultsListView;
     private EditText searchView;
-    private Button submitButton;
+    Button submitButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +50,15 @@ public class ItemIngredients extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    // Start live session logic here
-                    Toast.makeText(ItemIngredients.this, "Planning Added!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(ItemIngredients.this, FilledWeeklyPlanner.class);
-                    startActivity(intent);
+                Toast.makeText(ItemIngredients.this, "Planning Added!", Toast.LENGTH_SHORT).show();
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                FilledWeeklyPlannerFragment fragment = FilledWeeklyPlannerFragment.newInstance(1);
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
@@ -85,14 +93,6 @@ public class ItemIngredients extends AppCompatActivity {
             searchView.setText("");
             searchResultsAdapter.clear();
             searchResultsListView.setVisibility(View.GONE);
-        });
-
-        Button submitButton = findViewById(R.id.submitButton);
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Submit logic here
-            }
         });
     }
 
