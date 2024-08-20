@@ -23,7 +23,7 @@
                 android:layout_marginLeft="28dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="16 July 2024"
+                android:text="3 June 2024"
                 android:textColor="@color/black"
                 android:textSize="18dp" />
 
@@ -577,7 +577,6 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
 </LinearLayout>
 
 
