@@ -46,7 +46,6 @@ public class FilledWeeklyPlannerFragment extends Fragment {
         tlWeeklyPlanner = view.findViewById(R.id.tlWeeklyPlanner);
         viewPager = view.findViewById(R.id.viewPager);
 
-        startJourney = view.findViewById(R.id.startBtn);
 
         viewPager.setAdapter(new FilledPagerAdapter(this));
 

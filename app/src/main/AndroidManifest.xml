@@ -13,6 +13,9 @@
         android:theme="@style/Theme.JANCOOK"
         tools:targetApi="31">
         <activity
+            android:name=".FilledWeeklyPlan"
+            android:exported="false" />
+        <activity
             android:name=".WeeklyPlannerTransition"
             android:exported="false" />
         <activity
