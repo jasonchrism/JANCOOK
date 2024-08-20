@@ -50,8 +50,6 @@ public class ItemIngredients extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ItemIngredients.this, "Planning Added!", Toast.LENGTH_SHORT).show();
-
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
@@ -59,6 +57,10 @@ public class ItemIngredients extends AppCompatActivity {
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+
+//                Intent intent = new Intent(ItemIngredients.this, FilledWeeklyPlannerHost.class);
+//                startActivity(intent);
+//                finish();
             }
         });
 

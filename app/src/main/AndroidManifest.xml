@@ -36,17 +36,18 @@
         <activity
             android:name=".activity_post2"
             android:exported="false" />
-        <activity android:name=".PostActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".PostActivity"
+            android:exported="false" />
         <activity
             android:name=".Setting"
             android:exported="false" />
         <activity
             android:name=".FilledWeeklyPlanner"
             android:exported="false" />
-        <activity
-            android:name=".WeeklyPlannerActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".WeeklyPlannerActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".editProfile"
             android:exported="false" />

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,31 +35,31 @@ public class WeekPlannerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_week_planner, container, false);
 
         tlWeeklyPlanner = view.findViewById(R.id.tlWeeklyPlanner);
-//        viewPager = view.findViewById(R.id.viewPager);
+        viewPager = view.findViewById(R.id.viewPager);
 
         startJourney = view.findViewById(R.id.startBtn);
+
+        viewPager.setAdapter(new WeeklyPagerAdapter(this));
+
+        new TabLayoutMediator(tlWeeklyPlanner, viewPager, (tab, position) -> {
+            tab.setCustomView(createTabView(position));
+        }).attach();
+
+        if (tlWeeklyPlanner.getTabAt(0) != null) {
+            View view1 = tlWeeklyPlanner.getTabAt(0).getCustomView();
+            if (view1 != null) {
+                view1.setSelected(true);
+            }
+        }
 
         startJourney.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getActivity(), "hehe", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), ItemIngredients.class);
                 startActivity(intent);
             }
         });
-
-
-//        viewPager.setAdapter(new WeeklyPagerAdapter(this));
-//
-//        new TabLayoutMediator(tlWeeklyPlanner, viewPager, (tab, position) -> {
-//            tab.setCustomView(createTabView(position));
-//        }).attach();
-//
-//        if (tlWeeklyPlanner.getTabAt(0) != null) {
-//            View view1 = tlWeeklyPlanner.getTabAt(0).getCustomView();
-//            if (view1 != null) {
-//                view1.setSelected(true);
-//            }
-//        }
         return view;
     }
 
