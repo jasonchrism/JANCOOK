@@ -50,17 +50,13 @@ public class ItemIngredients extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                FragmentManager fragmentManager = getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//                FilledWeeklyPlannerFragment fragment = FilledWeeklyPlannerFragment.newInstance(1);
-//                fragmentTransaction.replace(R.id.fragment_container, fragment);
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-                Intent i = new Intent(ItemIngredients.this, WeeklyPlannerTransition.class);
-                startActivity(i);
-                finish();
+                FilledWeeklyPlannerFragment fragment = FilledWeeklyPlannerFragment.newInstance(1);
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
