@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -38,7 +39,6 @@ public class ItemIngredients extends AppCompatActivity {
     private EditText searchView;
     Button submitButton;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,17 +50,17 @@ public class ItemIngredients extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//                FilledWeeklyPlannerFragment fragment = FilledWeeklyPlannerFragment.newInstance(1);
+//                fragmentTransaction.replace(R.id.fragment_container, fragment);
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
 
-                FilledWeeklyPlannerFragment fragment = FilledWeeklyPlannerFragment.newInstance(1);
-                fragmentTransaction.replace(R.id.fragment_container, fragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-
-//                Intent intent = new Intent(ItemIngredients.this, FilledWeeklyPlannerHost.class);
-//                startActivity(intent);
-//                finish();
+                Intent i = new Intent(ItemIngredients.this, WeeklyPlannerTransition.class);
+                startActivity(i);
+                finish();
             }
         });
 
