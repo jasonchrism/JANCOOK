@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
                     selectedFragment = new DictionaryFragment();
                     break;
                 case R.id.weekly_planner:
-                    selectedFragment = new FilledWeeklyPlannerFragment();
+                    selectedFragment = new WeekPlannerFragment();
                     break;
                 case R.id.profile:
                     selectedFragment = new ProfileFragment();

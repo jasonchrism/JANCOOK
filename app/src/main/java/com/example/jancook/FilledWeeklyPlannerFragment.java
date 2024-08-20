@@ -61,14 +61,6 @@ public class FilledWeeklyPlannerFragment extends Fragment {
             }
         }
 
-        startJourney.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(), "hehe", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(), ItemIngredients.class);
-                startActivity(intent);
-            }
-        });
         return view;
     }
 
