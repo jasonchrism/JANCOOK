@@ -5,18 +5,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.jancook.DayFragment;
-import com.example.jancook.FilledWeeklyPlannerFragment;
+import com.example.jancook.MenuFragment;
 
-public class FilledWeeklyPlannerPagerAdapter extends FragmentStateAdapter {
-    public FilledWeeklyPlannerPagerAdapter(@NonNull Fragment fragment) {
-        super(fragment);
+public class FilledPagerAdapter extends FragmentStateAdapter {
+    public FilledPagerAdapter(@NonNull Fragment fragmentActivity) {
+        super(fragmentActivity);
     }
 
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return FilledWeeklyPlannerFragment.newInstance(position);
+        return MenuFragment.newInstance(position);
     }
 
     @Override

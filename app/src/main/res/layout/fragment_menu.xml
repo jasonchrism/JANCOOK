@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="16 July 2024"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="28dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/morning" />
+
+                <LinearLayout
+                    android:id="@+id/lrMenuWeeklyPlanner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/menu_weekly_planner_container"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/meal_1" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvMealName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="2dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Salad Beef Crunchy with Vegetable"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <ImageView
+                            android:id="@+id/ivClock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvMealName"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:src="@drawable/clock" />
+
+                        <TextView
+                            android:id="@+id/tvMinutes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvMealName"
+                            android:layout_toRightOf="@id/ivClock"
+                            android:fontFamily="@font/poppins"
+                            android:text="30 minutes"
+                            android:textColor="@color/text_gray"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvChicken1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivClock"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Chicken"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvEgg1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivClock"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/tvChicken1"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Egg"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvCorn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivClock"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/tvEgg1"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Corn"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvBread1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvChicken1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Bread"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvBeef1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvChicken1"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/tvBread1"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Beef"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvSpinach1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvChicken1"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/tvBeef1"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Spinach"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="55dp"
+                            android:layout_height="28dp"
+                            android:layout_below="@id/tvBread1"
+                            android:layout_marginLeft="10dp"
+                            android:text="Cook!"
+                            android:textAllCaps="false"
+                            android:textSize="7sp"
+                            app:cornerRadius="4dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lrMenuWeeklyPlanner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="79dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/menu_weekly_planner_container"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fried_chicken_mashed_potato" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvMealName1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Fried Chicken with Mashed Potato and Corn"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <ImageView
+                        android:id="@+id/ivClock1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvMealName1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="2dp"
+                        android:src="@drawable/clock" />
+
+                    <TextView
+                        android:id="@+id/tvMinutes1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvMealName1"
+                        android:layout_toRightOf="@id/ivClock1"
+                        android:fontFamily="@font/poppins"
+                        android:text="60 minutes"
+                        android:textColor="@color/text_gray"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/tvChicken2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivClock1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/weekly_planner_text_ingredient_background"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="Chicken"
+                        android:textColor="@color/primary"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/tvCorn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivClock1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@id/tvChicken2"
+                        android:background="@drawable/weekly_planner_text_ingredient_background"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="Corn"
+                        android:textColor="@color/primary"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/tvPotato2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivClock1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@id/tvCorn2"
+                        android:background="@drawable/weekly_planner_text_ingredient_background"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="Potato"
+                        android:textColor="@color/primary"
+                        android:textSize="8sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="55dp"
+                        android:layout_height="28dp"
+                        android:layout_below="@id/tvChicken2"
+                        android:layout_marginLeft="10dp"
+                        android:text="Cook!"
+                        android:textAllCaps="false"
+                        android:textSize="7sp"
+                        app:cornerRadius="4dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="10dp"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="28dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/afternoon" />
+
+                <LinearLayout
+                    android:id="@+id/lrMenuWeeklyPlanner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_weekly_planner_container"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/chicken_parmigiana" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvMealName3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="2dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Chicken Parmigiana"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <ImageView
+                            android:id="@+id/ivClock3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvMealName3"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:src="@drawable/clock" />
+
+                        <TextView
+                            android:id="@+id/tvMinutes3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvMealName3"
+                            android:layout_toRightOf="@id/ivClock3"
+                            android:fontFamily="@font/poppins"
+                            android:text="100 minutes"
+                            android:textColor="@color/text_gray"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvChicken3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivClock3"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Chicken"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvMushroom3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivClock3"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/tvChicken3"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Cheese"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="55dp"
+                            android:layout_height="28dp"
+                            android:layout_below="@id/tvChicken3"
+                            android:layout_marginLeft="10dp"
+                            android:text="Cook!"
+                            android:textAllCaps="false"
+                            android:textSize="7sp"
+                            app:cornerRadius="4dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="10dp"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="60dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/afternoon" />
+
+                <LinearLayout
+                    android:id="@+id/lrMenuWeeklyPlanner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_weekly_planner_container"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/crispy_sesame_lemon_chicken" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvMealName4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="2dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Chicken Parmigiana"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <ImageView
+                            android:id="@+id/ivClock4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvMealName4"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:src="@drawable/clock" />
+
+                        <TextView
+                            android:id="@+id/tvMinutes4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvMealName4"
+                            android:layout_toRightOf="@id/ivClock4"
+                            android:fontFamily="@font/poppins"
+                            android:text="80 minutes"
+                            android:textColor="@color/text_gray"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvChicken4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivClock4"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Chicken"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvEgg4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivClock4"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/tvChicken4"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Egg"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvSesame4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivClock4"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/tvEgg4"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Sesame"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvNoodle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvChicken4"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/tvBeans4"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Noodle"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/tvBeans4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvChicken4"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/weekly_planner_text_ingredient_background"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:text="Beans"
+                            android:textColor="@color/primary"
+                            android:textSize="8sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="55dp"
+                            android:layout_height="28dp"
+                            android:layout_below="@id/tvNoodle4"
+                            android:layout_marginLeft="10dp"
+                            android:text="Cook!"
+                            android:textAllCaps="false"
+                            android:textSize="7sp"
+                            app:cornerRadius="4dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+
